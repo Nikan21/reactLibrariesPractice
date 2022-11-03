@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Header from './header'
 import styles from "./home.module.sass";
 
 export default function Home() {
@@ -65,6 +66,7 @@ export default function Home() {
 
   return (
     <Fragment>
+      <Header />
       <form
         className={styles.registrationForm}
         onSubmit={handleSubmit(onSubmit)}
